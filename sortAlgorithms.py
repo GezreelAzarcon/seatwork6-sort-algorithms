@@ -8,6 +8,18 @@ def selectionSort(myList):
         myList[x], myList[minNum] = myList[minNum], myList[x]
 
 #Bubble Sort 
-#Insertion Sort 
+def bubbleSort(myList):
+    sorted = False
+    while not sorted:
+        sorted = True
+        for x in range(0, len(myList) - 1):
+            if myList[x] > myList[x + 1]:
+                sorted = False
+                myList[x], myList[x + 1] = myList[x + 1], myList[x]
+    return myList
+
+#Insertion Sort
+
 #Merge Sort
+
 #Quick Sort
