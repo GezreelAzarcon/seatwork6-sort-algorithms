@@ -28,5 +28,30 @@ def insertionSort(myList):
     return myList
 
 #Merge Sort
-
+def mergeSort(myList):
+    if len(myList) > 1:
+        leftList = myList[:len(myList)//2]
+        rightList = myList[len(myList)//2:]
+        mergeSort(leftList)
+        mergeSort(rightList)
+        x = 0 
+        y = 0
+        z = 0
+        while x < len(leftList) and y < len(rightList):
+            if leftList[x] < rightList[y]:
+                myList[z] = leftList[x]
+                x = x + 1
+            else:
+                myList[z] = rightList[y]
+                y = y + 1
+            z = z+ 1
+        while x < len(leftList):
+            myList[z] = leftList[x]
+            x = x + 1
+            z = z + 1
+        while y < len(rightList):
+            myList[z] = rightList[y]
+            y = y + 1
+            z = z + 1
+            
 #Quick Sort
