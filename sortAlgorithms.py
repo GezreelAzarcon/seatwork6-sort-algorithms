@@ -53,5 +53,18 @@ def mergeSort(myList):
             myList[z] = rightList[y]
             y = y + 1
             z = z + 1
-            
+
 #Quick Sort
+def quickSort(myList):
+    if len(myList) <= 1:
+        return myList
+    else:
+        pivot = myList.pop()
+    lower, greater = [], []
+    for x in myList:
+        if x > pivot:
+            greater.append(x)
+        else:
+            lower.append(x)
+    return quickSort(lower) + [pivot] + quickSort(greater)
+
