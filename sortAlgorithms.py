@@ -19,6 +19,13 @@ def bubbleSort(myList):
     return myList
 
 #Insertion Sort
+def insertionSort(myList):
+    for x in range(1, len(myList)):
+        toSort = myList[x]
+        while myList[x - 1] > toSort and x > 0:
+            myList[x], myList[x - 1] = myList[x - 1], myList[x]
+            x = x - 1
+    return myList
 
 #Merge Sort
 
